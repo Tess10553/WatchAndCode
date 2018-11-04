@@ -19,3 +19,21 @@
 
 //put all functions into a subject
 
+var todoList = {
+  list: ['item 1','item 2','item 3'],
+  showList: function(){
+    console.log(this.list);
+  },
+  addList: function(add){
+    this.list.push(add);
+    this.showList();
+  },
+  changeList: function(item,change){
+    this.list[item] = change;
+    this.showList();
+  },
+  deleteList: function (item) {
+    this.list.splice(item,1);
+    this.showList();
+  }
+}
