@@ -1,8 +1,20 @@
 var todoList = {
   list: [],
   showList: function(){
-    console.log(this.list);
+    if (this.list.length === 0) {
+      console.log('Add some todo into the list');
+    } else {
+      console.log('My Todos:');
+      for (var i = 0; i < this.list.length; i++) {
+        if (this.list[i].completed === false) {
+          console.log('( )',this.list.addText);
+        } else {
+          console.log('(X)',this.list.addText);
+        }
+      }
+    }
   },
+  
   addList: function(text){
     this.list.push({
       addText: text,
