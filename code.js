@@ -36,4 +36,19 @@ var todoList = {
     todo.completed = !todo.completed;
     this.showList();
   },
+  toogleAll: function() {
+    var totalTodo = this.list.length;
+    var completedTodos = 0;
+    for (let i = 0; i < this.list.length; i++) {
+      if (this.list[i].completed === false) {
+        completedTodos ++;
+      }
+      
+    }
+    //if everything true, make ererything false
+    if (completedTodos === totalTodo) {
+      completedTodos = this.list[item].completed
+    }
+
+  }
 }
